@@ -70,13 +70,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │  7       │  8       │  9       │          │
-            &trans     &trans     &trans     &trans     &trans         &trans    &kp kp_N7  &kp kp_N8  &kp kp_N9   &trans                                                                                                                 
+            &trans     &trans     &trans     &trans     &trans         &trans    &kp KP_N7  &kp KP_N8  &kp KP_N9   &trans                                                                                                                 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │  4       │  5       │  6       │          │
-            &trans     &trans     &trans     &trans     &trans         &trans    &kp kp_N4  &kp kp_N5  &kp kp_N6   &trans                                                                                                                
+            &trans     &trans     &trans     &trans     &trans         &trans    &kp KP_N4  &kp KP_N5  &kp KP_N6   &trans                                                                                                                
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │  1       │  2       │  3       │  0       │
-            &trans     &trans     &trans     &trans     &trans         &trans    &kp kp_N1  &kp kp_N2  &kp kp_N3  &kp kp_N0                                                                                                           
+            &trans     &trans     &trans     &trans     &trans         &trans    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0                                                                                                           
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -103,11 +103,11 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│ RESET    │          │          │          │PROFILE 0 │   │          │DISPLAY - │DISPLAY + │          │  RESET   │
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans &kp C_BRI_DN &kp C_BRI_UP &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │TOGGLE BT │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans  &out OUT_TOG &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│BOOTLOADER│          │          │TOGGLE BT │PROFILE 1 │   │          │VOLUME -  │VOLUME +  │          │BOOTLOADER│
+          &bootloader  &trans     &trans  &out OUT_TOG &bt BT_SEL 1    &trans &kp C_VOL_DN &kp C_VOL_UP &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
